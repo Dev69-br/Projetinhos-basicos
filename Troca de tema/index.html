@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Cor</title>
+    <style>
+        body{
+            background-color:darkslateblue ;
+            
+        }
+        #titulo{
+            text-align: center;
+            color: #F2EADF;
+            
+        }
+        #titulo:hover{
+            background-color: #BBC5BD;
+            border-radius: 20px;
+        }
+        .button{
+            background-color: black;
+            color: #F2EADF;
+            width: 350px;
+            text-align: center;
+            padding: 10px 10px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            font-size: 18px;
+
+        }
+        #buttons{
+            text-align: center;
+        }
+        .button:hover{
+            background-color: #BBC5BD;
+        }
+    </style>
+</head>
+<body id="res">
+    <h1 id="titulo">Toque Em Algum Botão Para Trocar De Cor</h1>
+    <div id="buttons">
+        <button class="button" onclick="dark(document.getElementById('res'),'#212121')">Tema Dark</button>
+        <button class="button" onclick="aleatoria(document.getElementById('res'))">Tema Aleatorio</button>
+    </div>
+    <script>
+        let r = Math.floor(Math.random()*255)
+            g =Math.floor(Math.random()*255)
+            b = Math.floor(Math.random()*255)
+        function dark(obj,cor){
+            obj.style.backgroundColor= cor;
+        }
+        function aleatoria(obj){
+            obj.style.backgroundColor= 'rgb('+r+','+g+','+b+')';
+
+        }
+    </script>
+</body>
+</html>
